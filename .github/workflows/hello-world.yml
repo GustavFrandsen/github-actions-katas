@@ -30,7 +30,7 @@ jobs:
           name: code
           path: .
         env:
-          docker_username: ${{ GustavFrandsen }}
+          docker_username: ${{ github.actor }}
           docker_password: ${{ secrets.GITHUB_TOKEN }}
       - name: build docker
         run: chmod +x ci/build-docker.sh && ci/build-docker.sh
