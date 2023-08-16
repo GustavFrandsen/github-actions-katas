@@ -16,3 +16,5 @@ jobs:
       with: 
         name: code
         path: .
+    - name: print workflow dump
+      run: echo ${{ toJson(github) }}
