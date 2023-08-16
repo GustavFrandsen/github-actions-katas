@@ -15,7 +15,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with: 
         name: code
-        path: app/build/libs/app-0.1-all.jar
+        path: .
     - name: print workflow dump
       run: echo '${{ toJson(github) }}'
   Docker-image:
@@ -28,7 +28,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: code
-          path: app/build/libs/app-0.1-all.jar
+          path: .
         env:
           docker_username: ${{ GustavFrandsen }}
           docker_password: ${{ secrets.GITHUB_TOKEN }}
